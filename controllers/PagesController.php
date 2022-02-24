@@ -16,9 +16,9 @@ class PagesController
 
                 $_SESSION['username'] = $checkLogin[0]->username;
 
-                $offers = App::get('database')->selectAll('offers');
+                header('Location: /');
 
-                return view('index', compact('offers'));
+                exit();
             }
         }
         return view('login');
